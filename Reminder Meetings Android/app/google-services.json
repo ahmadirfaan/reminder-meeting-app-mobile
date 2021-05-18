@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791071090984",
+    "project_id": "remindermeetings-21f28",
+    "storage_bucket": "remindermeetings-21f28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791071090984:android:754a7113144f02ff6b081d",
+        "android_client_info": {
+          "package_name": "com.irfaan.remindermeetings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791071090984-7p6km6dq69kq8go6vdp5umb0i098cr9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFdRIWX1nrx_JKSOJheDdoZtA7dxABgxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791071090984-7p6km6dq69kq8go6vdp5umb0i098cr9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

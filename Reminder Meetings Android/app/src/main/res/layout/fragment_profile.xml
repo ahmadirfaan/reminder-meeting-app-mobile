@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_utama"
+    tools:context=".presentations.profile.ProfileFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_id"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked"
+        android:outlineSpotShadowColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:text="ID Employee : "
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/id_employee"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="1"
+        android:textAlignment="textStart"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_id"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_name"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked"
+        android:outlineSpotShadowColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:textAlignment="textStart"
+        android:text="Nama : "
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_employee"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name_employee"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="Ahmad Irfaan Hibatullah"
+        android:textAlignment="textStart"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_name"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_email"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked"
+        android:outlineSpotShadowColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:textAlignment="textStart"
+        android:text="Email : "
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_employee"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/email_employee"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="irfaan.hibatullah@gmail.com"
+        android:textAlignment="textStart"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_email"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_log_out_account"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_employee"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
