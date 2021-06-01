@@ -2,9 +2,9 @@ server.port: 8081
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/meetingschedules
-    username: root
-    password: P@ssw0rd
+    url: jdbc:mysql://freedb.tech/freedbtech_remindermeetings
+    username: freedbtech_vargoadventure
+    password: hibatullah22
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
