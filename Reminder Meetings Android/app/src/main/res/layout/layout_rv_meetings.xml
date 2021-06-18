@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="@color/color_wulan"
+                android:backgroundTint="@color/color_bluesky"
                 android:drawableLeft="@drawable/ic_baseline_meeting_room_24"
                 android:drawableTint="@color/white"
                 android:text="Detail"

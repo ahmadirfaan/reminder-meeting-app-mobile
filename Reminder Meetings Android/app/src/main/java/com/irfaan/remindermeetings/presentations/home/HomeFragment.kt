@@ -43,6 +43,7 @@ class HomeFragment : Fragment() {
         loadingDialog = LoadingDialog.build(requireContext())
         initViewModel()
         subscribe()
+        setAlarm()
         homeViewAdapter = HomeViewAdapter(viewModel)
         idEmployee = sharedPreferences.getInt(AppConstant.APP_ID_EMPLOYEE, 0)
 
@@ -127,7 +128,6 @@ class HomeFragment : Fragment() {
                             this.setScheduleAlarm = listMeetings
                         }
                     }
-                    setAlarm()
                     binding.rvListMeeting.visibility = View.VISIBLE
                     homeViewAdapter.setScheduleMeetingList(listMeetings)
                 }

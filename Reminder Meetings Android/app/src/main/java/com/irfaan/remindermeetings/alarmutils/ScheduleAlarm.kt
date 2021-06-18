@@ -4,6 +4,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.SystemClock
 import android.util.Log
 import com.irfaan.remindermeetings.alarmutils.ScheduledWorker.Companion.NOTIFICATION_MESSAGE
 import com.irfaan.remindermeetings.alarmutils.ScheduledWorker.Companion.NOTIFICATION_TITLE
@@ -11,6 +12,7 @@ import com.irfaan.remindermeetings.data.models.ScheduleMeetings
 import com.irfaan.remindermeetings.utils.NotificationUtil
 import com.irfaan.remindermeetings.utils.isTimeAutomatic
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime
 import java.util.*
 
 
@@ -45,6 +47,7 @@ class ScheduleAlarm(private val scheduleMeetings: ScheduleMeetings, private val 
             .parse(scheduledTimeString!!)
         val instant = scheduledTime.toInstant().minusSeconds(1800)
         scheduledTime = Date.from(instant)
+        if(scheduledTime.time > System.currentTimeMillis())
         scheduledTime?.let {
             // With set(), it'll set non repeating one time alarm.
             alarmMgr.setExact(

@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_utama">#F9A826</color>
     <color name="color_wulan">#ff0000</color>
+    <color name="color_bluesky">#87ceeb</color>
 </resources>

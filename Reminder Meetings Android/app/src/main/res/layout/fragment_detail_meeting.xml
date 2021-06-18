@@ -8,7 +8,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/color_wulan"
+        android:backgroundTint="@color/color_bluesky"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:background="@color/color_wulan"
+                android:background="@color/color_bluesky"
                 android:src="@drawable/ic_baseline_cancel_48" />
 
             <com.google.android.material.textview.MaterialTextView

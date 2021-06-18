@@ -13,7 +13,7 @@
     <application
         android:name=".RemindersMeetingsApp"
         android:allowBackup="true"
-        android:icon="@drawable/undraw_schedule_meeting"
+        android:icon="@mipmap/ic_logo_round"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security"
         android:supportsRtl="true"

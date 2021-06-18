@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import com.irfaan.remindermeetings.R
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.finalproject.utils.ResourceStatus
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -194,6 +196,8 @@ class AddMeetingFragment : Fragment() {
                         "You Have Add ${data.detailScheduleList?.size} People  To Meeting ${data.title}",
                         Toast.LENGTH_LONG
                     ).show()
+                    findNavController().navigate(R.id.action_addMeetingFragment_to_homeFragment)
+
                 }
                 ResourceStatus.FAILURE -> {
                     loadingDialog.hide()

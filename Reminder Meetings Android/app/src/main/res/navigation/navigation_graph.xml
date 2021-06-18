@@ -62,7 +62,14 @@
         android:id="@+id/addMeetingFragment"
         android:name="com.irfaan.remindermeetings.presentations.addmeeting.AddMeetingFragment"
         android:label="fragment_add_meeting"
-        tools:layout="@layout/fragment_add_meeting" />
+        tools:layout="@layout/fragment_add_meeting" >
+        <action
+            android:id="@+id/action_addMeetingFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/addMeetingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.irfaan.remindermeetings.presentations.profile.ProfileFragment"

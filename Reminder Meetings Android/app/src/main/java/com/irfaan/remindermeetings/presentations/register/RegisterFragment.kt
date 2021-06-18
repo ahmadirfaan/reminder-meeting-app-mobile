@@ -174,6 +174,7 @@ class RegisterFragment : Fragment() {
 
     private fun clearText() {
         binding.apply {
+            signUpInputName.editText?.setText("")
             signUpInputEmail.editText?.setText("")
             signUpInputPassword.editText?.setText("")
             signUpConfirmPassword.editText?.setText("")
