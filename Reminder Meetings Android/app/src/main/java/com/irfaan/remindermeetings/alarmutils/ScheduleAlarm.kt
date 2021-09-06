@@ -47,7 +47,6 @@ class ScheduleAlarm(private val scheduleMeetings: ScheduleMeetings, private val 
             .parse(scheduledTimeString!!)
         val instant = scheduledTime.toInstant().minusSeconds(1800)
         scheduledTime = Date.from(instant)
-        if(scheduledTime.time > System.currentTimeMillis())
         scheduledTime?.let {
             // With set(), it'll set non repeating one time alarm.
             alarmMgr.setExact(

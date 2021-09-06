@@ -43,7 +43,6 @@ class HomeFragment : Fragment() {
         loadingDialog = LoadingDialog.build(requireContext())
         initViewModel()
         subscribe()
-        setAlarm()
         homeViewAdapter = HomeViewAdapter(viewModel)
         idEmployee = sharedPreferences.getInt(AppConstant.APP_ID_EMPLOYEE, 0)
 
@@ -103,8 +102,10 @@ class HomeFragment : Fragment() {
             backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.white))
             setTextColor(ColorStateList.valueOf(resources.getColor(R.color.color_utama)))
         }
-        idEmployee?.let { viewModel.setRvMeetingComingSoon(it) }
-
+        idEmployee?.let {
+            viewModel.setRvMeetingComingSoon(it)
+            setAlarm()
+        }
     }
 
     private fun initViewModel() {
@@ -123,9 +124,11 @@ class HomeFragment : Fragment() {
                 ResourceStatus.SUCCESS -> {
                     loadingDialog.hide()
                     val listMeetings = it.data as List<ScheduleMeetings>
-                    if(this.setScheduleAlarm.isNullOrEmpty()) {
-                        for(meeting in listMeetings) {
-                            this.setScheduleAlarm = listMeetings
+                    if(!binding.btnNotFinish.isEnabled){
+                        if(this.setScheduleAlarm.isNullOrEmpty()) {
+                            for(meeting in listMeetings) {
+                                this.setScheduleAlarm = listMeetings
+                            }
                         }
                     }
                     binding.rvListMeeting.visibility = View.VISIBLE
@@ -160,6 +163,11 @@ class HomeFragment : Fragment() {
         } else {
             println("SCHEDULE ALARM LOOPING DATA FROM API FALSE")
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        loadingDialog.dismiss()
     }
 
     companion object {
